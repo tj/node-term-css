@@ -71,15 +71,27 @@ exports.compile = function(str, style){
   // parse css
   if (style) style = css.parse(style);
 
-  // parse format
-  str = 'return "' + str.replace(/\{([^}]+)\}/g, function(_,  name){
+  // styled
+  function styled(_,  name){
     // support {classname prop}
     name = name.split(' ');
     var classname = name.length > 1 ? name.shift() : name[0];
     name = name[0];
     var seq = sequence(classname, style);
     return '\\033[' + seq + 'm" + obj.' + name + ' + "\\033[0m';
-  }) + '"';
+  }
+
+  // plain
+  function plain(_,  name){
+    // support {classname prop}
+    name = name.split(' ');
+    var classname = name.length > 1 ? name.shift() : name[0];
+    name = name[0];
+    return '" + obj.' + name + ' + "';
+  }
+
+  // parse format
+  str = 'return "' + str.replace(/\{([^}]+)\}/g, style ? styled : plain) + '"';
 
   return new Function('obj', str);
 };

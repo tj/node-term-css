@@ -82,6 +82,11 @@ output:
   instead of styling "labels.visits", "labels.uptime" separately,
   you may use `{label labels.visits}` and `{label labels.uptime}`.
 
+## Omitting styling
+
+ To output a plain string but use the same format, simply omit the css
+ string from the `.compile(fmt, style)` call.
+
 ## License 
 
 (The MIT License)

@@ -59,6 +59,7 @@ age {
 ```
 
 output:
+
   ![](http://f.cl.ly/items/0Q0q2b1H1c1u0x0V0o0m/Screen%20Shot%202012-07-26%20at%208.03.34%20AM.png)
 
 ## CSS properties

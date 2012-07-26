@@ -1,0 +1,15 @@
+
+name {
+  color: blue;
+  font-weight: bold;
+}
+
+species {
+  color: gray;
+  font-style: italic;
+}
+
+age {
+  color: green;
+  text-decoration: underline;
+}

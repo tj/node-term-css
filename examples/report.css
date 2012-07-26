@@ -1,0 +1,15 @@
+
+title {
+  font-weight: bold;
+}
+
+users,
+visits,
+uptime {
+  color: cyan;
+}
+
+label {
+  color: gray;
+  text-decoration: underline;
+}

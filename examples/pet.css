@@ -1,15 +1,16 @@
 
 name {
-  color: blue;
+  color: cyan;
   font-weight: bold;
 }
 
 species {
-  color: gray;
-  font-style: italic;
+  color: white;
+  font-weight: bold;
+  background: black;
 }
 
 age {
-  color: green;
+  color: red;
   text-decoration: underline;
 }

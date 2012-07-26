@@ -16,7 +16,7 @@ var loki = {
   age: 1
 };
 
-var fn = css.compile('  "{name}" is a {species}, he is {age} years old', style);
+var fn = css.compile('  {name} is a {species}, he is {age} years old', style);
 
 console.log();
 console.log(fn(tobi));

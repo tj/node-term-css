@@ -29,7 +29,7 @@ var loki = {
   age: 1
 };
 
-var fn = css.compile('  "{name}" is a {species}, he is {age} years old', style);
+var fn = css.compile('  {name} is a {species}, he is {age} years old', style);
 
 console.log();
 console.log(fn(tobi));
@@ -42,17 +42,18 @@ css:
 
 ```css
 name {
-  color: blue;
+  color: cyan;
   font-weight: bold;
 }
 
 species {
-  color: gray;
-  font-style: italic;
+  color: white;
+  font-weight: bold;
+  background: black;
 }
 
 age {
-  color: green;
+  color: red;
   text-decoration: underline;
 }
 ```
@@ -61,11 +62,11 @@ age {
 
   The following CSS properties / values are understood:
   
-    - `text-decoration: <underline|inverse>`
-    - `font-weight: <bold>`
-    - `font-style: <italic>`
-    - `color: <grey|gray|black|blue|cyan|green|red|magenta|yellow>`
-    - `background: <grey|gray|black|blue|cyan|green|red|magenta|yellow>`
+  - `text-decoration: <underline|inverse>`
+  - `font-weight: <bold>`
+  - `font-style: <italic>`
+  - `color: <grey|gray|black|blue|cyan|green|red|magenta|yellow>`
+  - `background: <grey|gray|black|blue|cyan|green|red|magenta|yellow>`
 
 ## Substitution
 

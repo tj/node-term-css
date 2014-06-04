@@ -66,7 +66,7 @@ exports.compile = function(str, style){
   str = str
     .replace(/"/g, '\\"')
     .replace(/\r/g, '\\r')
-    .replace(/\n/g, '\\n')
+    .replace(/\n/g, '\\n');
 
   // parse css
   if (style) style = css.parse(style);
@@ -148,14 +148,14 @@ function sequence(name, style) {
  */
 
 function styles(name, style) {
-  var styles = {};
+  var styl = {};
 
   style.stylesheet.rules.forEach(function(rule){
     if (!~rule.selectors.indexOf(name)) return;
     rule.declarations.forEach(function(decl){
-      styles[decl.property] = decl.value;
+      styl[decl.property] = decl.value;
     });
   });
 
-  return styles;
+  return styl;
 }
